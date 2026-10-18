@@ -21,7 +21,6 @@ export function SiteHeader() {
         <span className="nav-social">
           <XLink className="nav-x" label="Yi Long Musk on X">
             <XIcon />
-            <span>Follow</span>
           </XLink>
           <TelegramLink className="nav-tg" label="Yi Long Musk on Telegram">
             <TelegramIcon />

@@ -12,7 +12,7 @@ const initialFilters = {
     bots: false,
     tests: false,
 };
-const clickLabels = { buy: 'Buy', chart: 'DexTools', gmgn: 'Dexscreener', x: 'X' };
+const clickLabels = { buy: 'Buy', chart: 'DexTools', gmgn: 'DexScreener', x: 'X' };
 function formatNy(ms) {
     return new Intl.DateTimeFormat('en-US', {
         timeZone: 'America/New_York',
@@ -372,7 +372,7 @@ export default function Dashboard() {
               <ul className="cta-chips">
                 <li><span>Buy</span><strong>{summary.clicks.buy}</strong></li>
                 <li><span>DexTools</span><strong>{summary.clicks.chart}</strong></li>
-                <li><span>Dexscreener</span><strong>{summary.clicks.gmgn}</strong></li>
+                <li><span>DexScreener</span><strong>{summary.clicks.gmgn}</strong></li>
                 <li><span>X</span><strong>{summary.clicks.x}</strong></li>
               </ul>
             </article>

@@ -51,7 +51,7 @@ export function Hero() {
               <div className="cta-row">
                 <a className="btn btn-gold" data-link-role="buy" href="#" aria-disabled="true" target="_blank" rel="noopener">Buy $YILONG</a>
                 <a className="btn btn-red" data-link-role="chart" href="#" aria-disabled="true" target="_blank" rel="noopener">DexTools</a>
-                <a className="btn btn-red" data-link-role="gmgn" href="#" aria-disabled="true" target="_blank" rel="noopener">Dexscreener</a>
+                <a className="btn btn-red" data-link-role="gmgn" href="#" aria-disabled="true" target="_blank" rel="noopener">DexScreener</a>
                 <XIconLink className="btn btn-ghost"> Official X</XIconLink>
               </div>
             </div>

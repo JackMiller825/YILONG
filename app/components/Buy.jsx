@@ -45,7 +45,7 @@ export function Buy() {
           <div className="cta-row">
             <a className="btn btn-gold" data-link-role="buy" href="#" aria-disabled="true" target="_blank" rel="noopener">Buy on Uniswap</a>
             <a className="btn btn-red" data-link-role="chart" href="#" aria-disabled="true" target="_blank" rel="noopener">DexTools</a>
-            <a className="btn btn-red" data-link-role="gmgn" href="#" aria-disabled="true" target="_blank" rel="noopener">Dexscreener</a>
+            <a className="btn btn-red" data-link-role="gmgn" href="#" aria-disabled="true" target="_blank" rel="noopener">DexScreener</a>
           </div>
           <p className="fineprint">
             Only trust the contract address posted here and on <XLink>Official X</XLink>.
