@@ -32,7 +32,7 @@ Edit `lib/token.js` only:
 - `buyUrl`, `chartUrl`, `gmgnUrl` — optional verified links. When buy or chart is blank and the contract is valid, the site uses Uniswap and DexScreener on Ethereum mainnet.
 - `xUrl` and `telegramUrl` — official profiles. Blank social actions stay disabled. No Telegram block is shown.
 - `websiteUrl` — canonical HTTPS origin, when you have one.
-- `analyticsOrigin` — public origin of the visitor tracker, with no trailing slash. Leave blank until that server is hosted. GitHub Pages cannot store visitor data by itself.
+- `analyticsOrigin` — public origin of the visitor tracker. The live dashboard uses `https://yilong.103.161.35.238.sslip.io`.
 
 Supply is `1,000,000,000`. Tax is `0%`. LP burn and ownership renunciation stay planned until you verify them. Do not mark either as done in `lib/token.js` before that.
 
@@ -51,7 +51,7 @@ The initial password is `NeverSMILE`. It is stored as a hash in `data/` on first
 
 `npm run tracker:test` runs the tracker tests.
 
-To collect visitors from GitHub Pages, host this tracker on a public HTTPS origin, allow `https://jackmiller825.github.io` (the default `ALLOWED_ORIGINS`), and set `analyticsOrigin` in `lib/token.js` to that origin.
+The public tracker for GitHub Pages is `https://yilong.103.161.35.238.sslip.io`. It accepts requests from `https://jackmiller825.github.io`. `C:\Users\Administrator\tools\caddy\start-yilong.ps1` starts the local process and reloads the HTTPS proxy.
 
 ## Brand files
 
@@ -67,5 +67,4 @@ Navigation, closing, and footer use the circular logo. The hero uses the wide ba
 - Telegram URL, if you want it stored for later
 - Verified buy, chart, or GMGN URLs if they should differ from the defaults
 - Canonical website URL
-- Public analytics origin, if the dashboard should record the GitHub Pages site
 - Confirmation before LP burn or ownership renunciation is shown as complete
