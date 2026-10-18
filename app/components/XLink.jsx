@@ -27,3 +27,21 @@ export function XIconLink({ className, label, children }) {
     </XLink>
   );
 }
+
+export function TelegramLink({ className, children, label }) {
+  const disabled = !token.telegramUrl;
+  return (
+    <a
+      className={className}
+      href={disabled ? undefined : token.telegramUrl}
+      aria-disabled={disabled ? "true" : undefined}
+      tabIndex={disabled ? -1 : undefined}
+      target={disabled ? undefined : "_blank"}
+      rel={disabled ? undefined : "noopener"}
+      aria-label={label}
+      data-link-role="telegram"
+    >
+      {children}
+    </a>
+  );
+}

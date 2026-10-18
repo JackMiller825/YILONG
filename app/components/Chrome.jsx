@@ -1,6 +1,6 @@
 import { asset } from "../../lib/paths";
-import { XIcon } from "./icons";
-import { XLink } from "./XLink";
+import { TelegramIcon, XIcon } from "./icons";
+import { TelegramLink, XLink } from "./XLink";
 
 export function SiteHeader() {
   return (
@@ -18,10 +18,15 @@ export function SiteHeader() {
         <a href="#portraits">Portraits</a>
         <a href="#archives">Archives</a>
         <a href="#buy">How to Buy</a>
-        <XLink className="nav-x" label="Yi Long Musk on X">
-          <XIcon />
-          <span>Follow</span>
-        </XLink>
+        <span className="nav-social">
+          <XLink className="nav-x" label="Yi Long Musk on X">
+            <XIcon />
+            <span>Follow</span>
+          </XLink>
+          <TelegramLink className="nav-tg" label="Yi Long Musk on Telegram">
+            <TelegramIcon />
+          </TelegramLink>
+        </span>
       </nav>
     </header>
   );
@@ -39,7 +44,7 @@ export function SiteFooter() {
           <XIcon />
           Official X
         </XLink>
-        <p className="disclaimer">Parody meme coin. Independent Ethereum project. Not affiliated with the Solana Yi Long Ma token, Yi Long Ma, Elon Musk, Tesla, SpaceX, or X.</p>
+        <p className="disclaimer">Parody meme coin. Not affiliated with Elon Musk, Tesla, SpaceX, or X.</p>
         <p className="fineprint">Memecoins are volatile and have no intrinsic value. Nothing here is financial advice. © <span data-year="">2026</span> Yi Long Musk community.</p>
       </div>
     </footer>

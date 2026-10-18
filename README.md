@@ -30,7 +30,7 @@ Edit `lib/token.js` only:
 
 - `contractAddress` — Ethereum mainnet `0x` address. Leave it empty until you have one. Both contract boxes then show `Coming Soon..`, and copy, buy, DexTools, and Dexscreener stay disabled.
 - `buyUrl`, `chartUrl`, `gmgnUrl` — optional verified links for Buy, DexTools, and Dexscreener. When any of them is blank and the contract is valid, the site uses Uniswap, DexTools, and Dexscreener on Ethereum mainnet.
-- `xUrl` and `telegramUrl` — official profiles. Blank social actions stay disabled. No Telegram block is shown.
+- `xUrl` and `telegramUrl` — official profiles. The header shows X and a Telegram icon beside it. Blank social actions stay disabled.
 - `websiteUrl` — canonical HTTPS origin, when you have one.
 - `analyticsOrigin` — public origin of the visitor tracker. The live dashboard uses `https://yilong.103.161.35.238.sslip.io`.
 

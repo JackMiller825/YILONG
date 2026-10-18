@@ -11,6 +11,7 @@ const LINKS = {
  chart: ca => CONFIG.chartUrl || `https://www.dextools.io/app/en/ether/token/${ca}`,
  gmgn: ca => CONFIG.gmgnUrl || `https://dexscreener.com/ethereum/${ca}`,
  x: () => CONFIG.xUrl || "",
+ telegram: () => CONFIG.telegramUrl || "",
 };
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
@@ -21,7 +22,7 @@ function initContract() {
 
   $$("[data-link-role]").forEach((a) => {
     const role = a.dataset.linkRole;
-    const href = live && LINKS[role] ? LINKS[role](ca) : (role === "x" ? LINKS.x() : "");
+    const href = role === "x" || role === "telegram" ? LINKS[role]() : (live && LINKS[role] ? LINKS[role](ca) : "");
     if (href) {
       a.href = href;
       a.target = "_blank";
@@ -288,6 +289,7 @@ function startAnalytics() {
   document.addEventListener("click", (event) => {
     const link = event.target.closest("[data-link-role]");
     if (!link || link.getAttribute("aria-disabled") === "true") return;
+    if (!["buy", "chart", "gmgn", "x"].includes(link.dataset.linkRole)) return;
     post("/api/analytics/collect", payload("click", crypto.randomUUID(), link.dataset.linkRole));
   });
   const sections = $$("header[id], main section[id]");
