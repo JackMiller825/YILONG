@@ -28,8 +28,8 @@ GitHub Pages builds the same export with `NEXT_PUBLIC_BASE_PATH=/YILONG`, so the
 
 Edit `lib/token.js` only:
 
-- `contractAddress` — Ethereum mainnet `0x` address. Leave it empty until you have one. Both contract boxes then show `Coming Soon..`, and copy, buy, chart, and GMGN stay disabled.
-- `buyUrl`, `chartUrl`, `gmgnUrl` — optional verified links. When buy or chart is blank and the contract is valid, the site uses Uniswap and DexScreener on Ethereum mainnet.
+- `contractAddress` — Ethereum mainnet `0x` address. Leave it empty until you have one. Both contract boxes then show `Coming Soon..`, and copy, buy, DexTools, and Dexscreener stay disabled.
+- `buyUrl`, `chartUrl`, `gmgnUrl` — optional verified links for Buy, DexTools, and Dexscreener. When any of them is blank and the contract is valid, the site uses Uniswap, DexTools, and Dexscreener on Ethereum mainnet.
 - `xUrl` and `telegramUrl` — official profiles. Blank social actions stay disabled. No Telegram block is shown.
 - `websiteUrl` — canonical HTTPS origin, when you have one.
 - `analyticsOrigin` — public origin of the visitor tracker. The live dashboard uses `https://yilong.103.161.35.238.sslip.io`.
@@ -65,6 +65,6 @@ Navigation, closing, and footer use the circular logo. The hero uses the wide ba
 - Ethereum contract address
 - Official X URL
 - Telegram URL, if you want it stored for later
-- Verified buy, chart, or GMGN URLs if they should differ from the defaults
+- Verified buy, DexTools, or Dexscreener URLs if they should differ from the defaults
 - Canonical website URL
 - Confirmation before LP burn or ownership renunciation is shown as complete

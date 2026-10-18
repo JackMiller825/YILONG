@@ -8,8 +8,8 @@ const CONTRACT_ADDRESS = /^0x[0-9a-fA-F]{40}$/.test(CONFIG.contractAddress || ""
 const PLACEHOLDER = CONFIG.caPlaceholder || "Coming Soon..";
 const LINKS = {
  buy: ca => CONFIG.buyUrl || `https://app.uniswap.org/swap?chain=mainnet&outputCurrency=${ca}`,
- chart: ca => CONFIG.chartUrl || `https://dexscreener.com/ethereum/${ca}`,
- gmgn: () => CONFIG.gmgnUrl || "",
+ chart: ca => CONFIG.chartUrl || `https://www.dextools.io/app/en/ether/token/${ca}`,
+ gmgn: ca => CONFIG.gmgnUrl || `https://dexscreener.com/ethereum/${ca}`,
  x: () => CONFIG.xUrl || "",
 };
 const $ = (s, r = document) => r.querySelector(s);

@@ -12,6 +12,7 @@ const initialFilters = {
     bots: false,
     tests: false,
 };
+const clickLabels = { buy: 'Buy', chart: 'DexTools', gmgn: 'Dexscreener', x: 'X' };
 function formatNy(ms) {
     return new Intl.DateTimeFormat('en-US', {
         timeZone: 'America/New_York',
@@ -370,8 +371,8 @@ export default function Dashboard() {
               </div>
               <ul className="cta-chips">
                 <li><span>Buy</span><strong>{summary.clicks.buy}</strong></li>
-                <li><span>Chart</span><strong>{summary.clicks.chart}</strong></li>
-                <li><span>GMGN</span><strong>{summary.clicks.gmgn}</strong></li>
+                <li><span>DexTools</span><strong>{summary.clicks.chart}</strong></li>
+                <li><span>Dexscreener</span><strong>{summary.clicks.gmgn}</strong></li>
                 <li><span>X</span><strong>{summary.clicks.x}</strong></li>
               </ul>
             </article>
@@ -510,7 +511,7 @@ export default function Dashboard() {
             <h4>CTA clicks</h4>
             {(detail.clicks ?? []).length === 0 ? <p>No CTA clicks stored.</p> : (<ul>
                 {detail.clicks?.map((click) => (<li key={`${click.createdAt}-${click.kind}`}>
-                    {formatNy(click.createdAt)} · {click.kind}
+                    {formatNy(click.createdAt)} · {clickLabels[click.kind] || click.kind}
                   </li>))}
               </ul>)}
             <button type="button" onClick={() => setDetail(null)}>
